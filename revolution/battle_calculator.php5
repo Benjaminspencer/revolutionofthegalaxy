@@ -86,7 +86,7 @@ class BattleCalculator {
 			// Time to compute Damage
 			$total_attackers->damage = $this->get_damage($total_defenders, $total_attackers);
 			$total_defenders->damage = $this->get_damage($total_attackers, $total_defenders);
-			$total_attackers->captured = $this->get_creature_capture($total_defenders*2.0, $total_attackers);
+			$total_attackers->captured = $this->get_creature_capture($total_defenders, $total_attackers);
 			$total_defenders->captured = $this->get_creature_capture($total_attackers, $total_defenders);
 			$total_attackers->structures_captured = $this->get_structure_capture($total_attackers, $total_defenders);
 			$cap_structures = floor (($pd->unassigned + $pd->extractor + $pd->genetic_lab + $pd->powerplant + $pd->factory) * 0.10);
